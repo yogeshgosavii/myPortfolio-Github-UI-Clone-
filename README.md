@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # myPortfolio 
 
 Welcome to myPortfolio! This website showcases my projects, skills, and contact information in a clean and modern design inspired by GitHub's layout.
@@ -49,8 +48,3 @@ cd myportfolio
 - [Unsplash](https://unsplash.com/) - Source of images used in the project.
 - [Codecademy](https://www.codecademy.com/) - Online resources for learning web development.
 
-
-
-=======
-# myPortfolio
->>>>>>> 9406e3affbbb97ca91c075de22222b46a4d3f08b
