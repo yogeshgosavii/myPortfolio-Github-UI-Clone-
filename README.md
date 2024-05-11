@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # myPortfolio 
 
 Welcome to myPortfolio! This website showcases my projects, skills, and contact information in a clean and modern design inspired by GitHub's layout.
@@ -50,3 +51,6 @@ cd myportfolio
 
 
 
+=======
+# myPortfolio
+>>>>>>> 9406e3affbbb97ca91c075de22222b46a4d3f08b
