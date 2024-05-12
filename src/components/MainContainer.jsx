@@ -4,7 +4,7 @@ import profilImage from "../assets/profileImage.jpg";
 function MainContainer() {
   const [showTag, setShowTag] = useState(false);
   return (
-    <div className="flex flex-col md:flex-row mt-10 justify-center outline-none md:mt-[39px] px-4 pb-10 text-gray-200 md:px-[32px] gap-[23px]  w-full">
+    <div className="flex-1 flex flex-col md:flex-row mt-10 justify-center outline-none md:mt-[39px] px-4 pb-10 text-gray-200 md:px-[32px] gap-[23px]  w-full">
       <div className=" flex flex-col md:max-w-[298px] ml-0 sm:-ml-px">
         <div className="flex md:flex-col order-1 ">
           <div className="flex relative  items-center "  onMouseEnter={() => setShowTag(true)}
@@ -21,7 +21,7 @@ function MainContainer() {
           </div>
           <div className="ml-4 md:ml-0 flex-1 flex flex-col justify-center align-middle leading-3 -mt-[3px] ">
             <p className="text-2xl font-semibold md:mt-[15px]">Yogesh Gosavi</p>
-            <p className="text-xl font-thin text-[#848d97] bg-transparent ">
+            <p className="text-xl font-light sm:font-thin text-[#848d97] bg-transparent ">
               yogeshgosavii
             </p>
           </div>
@@ -335,7 +335,7 @@ function MainContainer() {
               Customize your pins
             </p>
           </div>
-          <div className="grid md:grid-cols-1 text-[#848d97]  lg:grid-cols-2 mt-5 gap-4 sm:grid-cols-2">
+          <div className="grid md:grid-cols-2 text-[#848d97]  lg:grid-cols-2 mt-5 gap-4 grid-cols-1 sm:grid-cols-2">
             <div className="border border-[#30363d] gap-3 p-4 flex flex-col space-y-2  rounded-md">
              <div className="flex-1  ">
                 <div className="flex items-center gap-2 sm:justify-between ">
@@ -375,7 +375,7 @@ function MainContainer() {
                   </div>
                   <p className="border border-[#30363d] text-[12px]  px-2.5 text-gray-400 rounded-full">Public</p>
                 </div>
-                <p className="text-[12px]  ">An Ewaste management website the manages the whole process from booking the appointment for the user to managing the appointments for the ewaste center to  an manages further till a good reward is added to the user's account </p>
+                <p className="text-[12px] mt-1.5 ">An Ewaste management website the manages the whole process from booking the appointment for the user to managing the appointments for the ewaste center to  an manages further till a good reward is added to the user's account </p>
               </div>
               <div className="flex gap-4 flex-wrap">
                 <div className="flex  items-center gap-1">
@@ -411,7 +411,7 @@ function MainContainer() {
                   </div>
                   <p className="border border-[#30363d] text-[12px]  px-2.5 text-gray-400 rounded-full">Public</p>
                 </div>
-                <p className="text-[12px]  ">A library management system where you can create your own library system and assign ids to users/students and create different sections for admins and keep track of books and borrowed books</p>
+                <p className="text-[12px]  mt-1.5">A library management system where you can create your own library system and assign ids to users/students and create different sections for admins and keep track of books and borrowed books</p>
               </div>
               <div className="flex gap-4 flex-wrap">
                 <div className="flex  items-center gap-1">

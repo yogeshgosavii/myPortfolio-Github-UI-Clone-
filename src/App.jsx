@@ -2,19 +2,13 @@
 
 import React from "react";
 import "./App.css";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Education from "./components/Education";
-import Skills from "./components/Skills";
-import Certifications from "./components/Certifications";
-import Projects from "./components/Projects";
 import Header from "./components/Header";
 import MainContainer from "./components/MainContainer";
 
 function App() {
   return (
     <div
-      className="bg-[#0d1117] min-h-screen min-w-96"
+      className="bg-[#0d1117] flex flex-col min-h-dvh min-w-96"
       style={{ scrollbarWidth: "none" }}
     >
       <Header />
