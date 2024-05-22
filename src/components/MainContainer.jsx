@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import profilImage from "../assets/profileImage.jpg";
+import ImageView from "./ImageView";
 
 function MainContainer() {
   const [showTag, setShowTag] = useState(false);
   const [followers, setFollowers] = useState(null);
   const [following, setFollowing] = useState(null);
+  const [profileIamgeVisibility, setprofileIamgeVisibility] = useState(false);
 
    useEffect(() => {
     const fetchGithubData = async () => {
@@ -21,7 +23,8 @@ function MainContainer() {
     fetchGithubData();
   }, []);
   return (
-    <div className="flex-1 flex flex-col md:flex-row mt-10 justify-center outline-none md:mt-[39px] px-4 pb-10 text-gray-200 md:px-[32px] gap-[23px]  w-full">
+    <div className="">
+    <div className="flex-1 flex flex-col md:flex-row mt-10 justify-center outline-none md:mt-[39px] px-4 pb-10 text-gray-200 md:px-[32px] gap-[23px] ">
       <div className=" flex flex-col md:max-w-[298px] ml-0 sm:-ml-px">
         <div className="flex md:flex-col order-1 ">
           <div className="flex relative  items-center "
@@ -31,6 +34,7 @@ function MainContainer() {
                 // src="https://avatars.githubusercontent.com/u/43775498?v=4"
                 height={30}
                 width={30}
+                onClick={()=>{setprofileIamgeVisibility(true)}}
                 src={profilImage}
               />
               <p className="md:flex items-center absolute  left-[260px] bottom-8 hidden bg-[#0d1117] border border-[#30363d] cursor-default rounded-full px-2 py-[7px]" onMouseEnter={() => setShowTag(true)} onMouseLeave={() => setShowTag(false)}>🎯<span className={`text-sm ml-1 cursor-text ${!showTag?"hidden":null}`}> Focusing</span></p>
@@ -467,14 +471,15 @@ function MainContainer() {
                   <p className="bg-red-600 border border-[#30363d]  rounded-full h-3 w-3 "></p>
                   <p className="text-[12px]  -mt-[2px]">Java</p>
                 </div>
-               
-               
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+          <ImageView src={profilImage} visibility= {profileIamgeVisibility} setVisibility={setprofileIamgeVisibility}/>
+    </div>
+
   );
 }
 

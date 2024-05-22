@@ -18,7 +18,7 @@ function Header() {
     fetchGithubData();
   }, []);
   return (
-    <header className="w-full p-4 pb-0 min-w-96 bg-[#010409] border-b border-[#30363d]">
+    <header className=" p-4 pb-0 bg-[#010409] border-b border-[#30363d]">
       <div className="flex justify-between">
         <div className="flex gap-4 text-gray-100 ">
           <svg
@@ -178,10 +178,10 @@ function Header() {
           </span>
         </div>
       </div>
-      <div className="flex mt-[11px] -mb-[1px] justify-between">
-      <ul className="text-white  justify-center min-h-11 h-full flex gap-[8px] text-sm ">
+      <div className="flex mt-[8px] -mb-[1px] justify-between">
+      <ul className="text-white  justify-center min-h-12 h-full flex gap-[8px] text-sm ">
         <li className=" flex flex-col relative justify-center ">
-          <span className="px-[8px]  hover:bg-[#23272cab] rounded-md  cursor-pointer font-medium py-[5px] flex items-center gap-2 ">
+          <span className="px-[8px]  hover:bg-[#23272cab] rounded-md   cursor-pointer font-medium py-[5px] flex items-center gap-2 ">
             <svg
               aria-hidden="true"
               fill="#848d97"
@@ -218,7 +218,7 @@ function Header() {
               {repositories}
             </p>
           </span>
-          <p className="bg-transparent rounded-full w-full h-[2px] mt-px"></p>
+          {/* <p className="bg-transparent rounded-full w-full h-[2px] mt-0"></p> */}
         </li>
         <li className="hidden sm:flex flex-col relative justify-center">
         <span className="px-[8px]  hover:bg-[#23272cab] rounded-md  cursor-pointer  py-[5px] flex items-center gap-2 ">
