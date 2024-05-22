@@ -1,23 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import profilImage from "../assets/profileImage.jpg";
 
 function MainContainer() {
   const [showTag, setShowTag] = useState(false);
+  const [followers, setFollowers] = useState(null);
+  const [following, setFollowing] = useState(null);
+
+   useEffect(() => {
+    const fetchGithubData = async () => {
+      try {
+        const response = await fetch('https://api.github.com/users/yogeshgosavii');
+        const data = await response.json();
+        setFollowers(data.followers);
+        setFollowing(data.following);
+      } catch (error) {
+        console.error('Error fetching GitHub data:', error);
+      }
+    };
+
+    fetchGithubData();
+  }, []);
   return (
     <div className="flex-1 flex flex-col md:flex-row mt-10 justify-center outline-none md:mt-[39px] px-4 pb-10 text-gray-200 md:px-[32px] gap-[23px]  w-full">
       <div className=" flex flex-col md:max-w-[298px] ml-0 sm:-ml-px">
         <div className="flex md:flex-col order-1 ">
-          <div className="flex relative  items-center "  onMouseEnter={() => setShowTag(true)}
-      onMouseLeave={() => setShowTag(false)} >
+          <div className="flex relative  items-center "
+             >
             <img
-            
                 className="aspect-square min-w-[58px] max-h-[100px] md:max-h-full sm:w-fit max-w-full   border-2 border-[#30363d] rounded-full"
                 // src="https://avatars.githubusercontent.com/u/43775498?v=4"
                 height={30}
                 width={30}
                 src={profilImage}
               />
-              <p className="md:flex items-center absolute left-[260px] bottom-8 hidden bg-[#0d1117] border border-[#30363d] cursor-default rounded-full px-2 py-[7px]">🎯<span className={`text-sm ml-1 cursor-text ${!showTag?"hidden":null}`}> Focusing</span></p>
+              <p className="md:flex items-center absolute  left-[260px] bottom-8 hidden bg-[#0d1117] border border-[#30363d] cursor-default rounded-full px-2 py-[7px]" onMouseEnter={() => setShowTag(true)} onMouseLeave={() => setShowTag(false)}>🎯<span className={`text-sm ml-1 cursor-text ${!showTag?"hidden":null}`}> Focusing</span></p>
           </div>
           <div className="ml-4 md:ml-0 flex-1 flex flex-col justify-center align-middle leading-3 -mt-[3px] ">
             <p className="text-2xl font-semibold md:mt-[15px]">Yogesh Gosavi</p>
@@ -27,9 +43,9 @@ function MainContainer() {
           </div>
         </div>
         <div className="w-full flex md:order-2 order-last justify-between gap-2 font-medium text-sm mt-3.5">
-          <button className="border  bg-[#21262d]  hover:bg-[#292e36] py-[5px] w-full rounded-md border-[#30363d]">
-            Follow
-          </button>
+          <a href="https://github.com/yogeshgosavii" className="border text-center  bg-[#21262d]  hover:bg-[#292e36] py-[5px] w-full rounded-md border-[#30363d]">
+            Go to github profile
+          </a>
           <button className="border w-full hidden  bg-[#21262d] hover:bg-[#292e36] justify-center items-center gap-1.5 rounded-md border-[#30363d]">
             <svg
               aria-hidden="true"
@@ -73,11 +89,11 @@ function MainContainer() {
           </svg>
           <p>
             {" "}
-            1 <span className="text-[#848d97] font-normal">followers</span> · 0{" "}
+            {followers}<span className="text-[#848d97] font-normal"> followers</span> · {following}{" "}
             <span className="text-[#848d97] font-normal">following</span>
           </p>
         </div>
-        <div className="mt-5 space-y-1 order-4 text-sm">
+        <div className="mt-5 space-y-2 order-4 text-sm">
           <div className="flex items-center gap-2">
             <svg
               class="octicon octicon-location"
@@ -343,7 +359,7 @@ function MainContainer() {
                       <svg aria-hidden="true" fill="#848d97" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo mr-1 color-fg-muted">
                           <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
                       </svg>
-                      <p className="font-semibold text-sm text-blue-500">Blogger</p>
+                      <p className="font-semibold text-sm text-blue-500 hover:underline hover:underline-offset-2">Blogger</p>
                     </div>
                     <p className="border border-[#30363d] text-[12px]  px-2.5 text-gray-400 rounded-full">Public</p>
                   </div>
@@ -371,7 +387,7 @@ function MainContainer() {
                     <svg aria-hidden="true" fill="#848d97" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo mr-1 color-fg-muted">
                         <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
                     </svg>
-                    <p className="font-semibold text-sm text-blue-500">GreenCircuit</p>
+                    <p className="font-semibold text-sm text-blue-500 hover:underline hover:underline-offset-2 cursor-pointer">GreenCircuit</p>
                   </div>
                   <p className="border border-[#30363d] text-[12px]  px-2.5 text-gray-400 rounded-full">Public</p>
                 </div>
@@ -407,7 +423,7 @@ function MainContainer() {
                     <svg aria-hidden="true" fill="#848d97" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo mr-1 color-fg-muted">
                         <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
                     </svg>
-                    <p className="font-semibold text-sm text-blue-500">myLib</p>
+                    <p className="font-semibold text-sm text-blue-500 hover:underline hover:underline-offset-2">myLib</p>
                   </div>
                   <p className="border border-[#30363d] text-[12px]  px-2.5 text-gray-400 rounded-full">Public</p>
                 </div>
@@ -440,7 +456,7 @@ function MainContainer() {
                     <svg aria-hidden="true" fill="#848d97" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo mr-1 color-fg-muted">
                         <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
                     </svg>
-                    <p className="font-semibold text-sm text-blue-500">ShopZ</p>
+                    <p className="font-semibold text-sm text-blue-500 hover:underline hover:underline-offset-2">ShopZ</p>
                   </div>
                   <p className="border border-[#30363d] text-[12px]  px-2.5 text-gray-400 rounded-full">Public</p>
                 </div>

@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import githubLogoWhite from "../assets/github-mark-white.svg";
 
 function Header() {
+  const [repositories, setrepositories] = useState(null);
+  useEffect(() => {
+    const fetchGithubData = async () => {
+      try {
+        const response = await fetch('https://api.github.com/users/yogeshgosavii');
+        const data = await response.json();
+        
+        setrepositories(data.public_repos)
+      } catch (error) {
+        console.error('Error fetching GitHub data:', error);
+      }
+    };
+
+    fetchGithubData();
+  }, []);
   return (
     <header className="w-full p-4 pb-0 min-w-96 bg-[#010409] border-b border-[#30363d]">
       <div className="flex justify-between">
@@ -23,7 +38,7 @@ function Header() {
           <img className="h-[31px] w-8" src={githubLogoWhite} />
           <p className="text-sm font-medium flex items-center">yogeshgosavii</p>
         </div>
-        <div className="inline-flex text-[#848d97] gap-3">
+        <div className="flex text-[#848d97] gap-3">
           <div className="border border-[#30363d] rounded-md flex gap-2 items-center px-[7px]">
             <svg
               aria-hidden="true"
@@ -113,23 +128,28 @@ function Header() {
                 ></path>
               </svg>
             </span>
-            <span className="border  border-[#30363d] hidden sm:flex px-[7px] rounded-md  items-center ">
-              <svg
-                aria-hidden="true"
-                height="16"
-                viewBox="0 0 16 16"
-                version="1.1"
-                width="16"
-                data-view-component="true"
-                class="octicon octicon-git-pull-request Button-visual"
-              >
-                <path
-                  fill="#848d97"
-                  d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                ></path>
-              </svg>
+
+            {/* pull request */}
+            <span className=" h-auto text-center  relative">
+              <span onMouseOver={()=>{document.getElementById("pull-project").style.visibility = "visible"}} onMouseOut={()=>{document.getElementById("pull-project").style.visibility = "hidden"}} className="border h-full cursor-pointer hover:bg-[#23272cab]  border-[#30363d] hidden sm:flex px-[7px] rounded-md  items-center ">
+                <svg
+                  aria-hidden="true"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  version="1.1"
+                  width="16"
+                  data-view-component="true"
+                  class="octicon octicon-git-pull-request Button-visual"
+                >
+                  <path
+                    fill="#848d97"
+                    d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
+                  ></path>
+                </svg>
+              </span>
+              <span id="pull-project" style={{visibility:"hidden"}} className="-left-10  absolute text-nowrap px-2 py-1 rounded-md mt-2.5 bg-gray-500  text-white text-center text-sm ">Project Request</span>
             </span>
-            <span className="border border-[#30363d] flex px-[7px] rounded-md  items-center ">
+            <span className="border  border-[#30363d] flex px-[7px] rounded-md  items-center ">
               <svg
                 aria-hidden="true"
                 height="16"
@@ -159,9 +179,9 @@ function Header() {
         </div>
       </div>
       <div className="flex mt-[11px] -mb-[1px] justify-between">
-      <ul className="text-white  flex gap-[8px] text-sm ">
-        <li className="">
-          <span className="px-[8px] font-medium py-[11px] flex items-center gap-2 ">
+      <ul className="text-white  justify-center min-h-11 h-full flex gap-[8px] text-sm ">
+        <li className=" flex flex-col relative justify-center ">
+          <span className="px-[8px]  hover:bg-[#23272cab] rounded-md  cursor-pointer font-medium py-[5px] flex items-center gap-2 ">
             <svg
               aria-hidden="true"
               fill="#848d97"
@@ -176,10 +196,11 @@ function Header() {
             </svg>
             <p>Overview</p>
           </span>
-          <p className="bg-[#f78166] rounded-full w-full h-[2px] mt-px"></p>
+          <p className="bg-[#f78166] absolute rounded-full w-full bottom-0 h-[2px] self-end"></p>
         </li>
-        <li className="">
-          <span className="px-[8px]  py-[11px] flex items-center gap-2 ">
+
+        <li className=" flex flex-col relative justify-center ">
+          <span className="px-[8px]  hover:bg-[#23272cab] rounded-md  cursor-pointer  py-[5px] flex items-center gap-2 ">
             <svg
               aria-hidden="true"
               fill="#848d97"
@@ -194,13 +215,13 @@ function Header() {
             </svg>
             <p>Repositories</p>
             <p className="bg-[#30363d]  justify-center rounded-full px-[4px] py-0.5 h-[20px] w-[20px] flex items-center text-clip text-[12px]">
-              7
+              {repositories}
             </p>
           </span>
           <p className="bg-transparent rounded-full w-full h-[2px] mt-px"></p>
         </li>
-        <li className="hidden sm:inline">
-          <span className="px-[8px]  py-[11px] flex items-center gap-2 ">
+        <li className="hidden sm:flex flex-col relative justify-center">
+        <span className="px-[8px]  hover:bg-[#23272cab] rounded-md  cursor-pointer  py-[5px] flex items-center gap-2 ">
             <svg
               aria-hidden="true"
               fill="#848d97"
@@ -217,8 +238,8 @@ function Header() {
           </span>
           <p className="bg-transparent rounded-full w-full h-[2px] mt-px"></p>
         </li>
-        <li className="hidden sm:inline">
-          <span className="px-[8px]  py-[11px] flex items-center gap-2 ">
+        <li className="hidden sm:flex flex-col relative justify-center">
+        <span className="px-[8px]  hover:bg-[#23272cab] rounded-md  cursor-pointer  py-[5px] flex items-center gap-2 ">
             <svg
               aria-hidden="true"
               fill="#848d97"
@@ -235,8 +256,8 @@ function Header() {
           </span>
           <p className="bg-transparent rounded-full w-full h-[2px] mt-px"></p>
         </li>
-        <li className="hidden sm:inline">
-          <span className="px-[8px]  py-[11px] flex items-center gap-2 ">
+        <li className="hidden sm:flex flex-col relative justify-center">
+        <span className="px-[8px]  hover:bg-[#23272cab] rounded-md  cursor-pointer  py-[5px] flex items-center gap-2 ">
             <svg
               aria-hidden="true"
               fill="#848d97"
