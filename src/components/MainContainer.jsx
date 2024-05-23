@@ -30,7 +30,7 @@ function MainContainer() {
           <div className="flex relative  items-center "
              >
             <img
-                className="aspect-square min-w-[58px] max-h-[100px] md:max-h-full sm:w-fit max-w-full   border-2 border-[#30363d] rounded-full"
+                className="aspect-square cursor-pointer min-w-[58px] max-h-[100px] md:max-h-full sm:w-fit max-w-full   border-2 border-[#30363d] rounded-full"
                 // src="https://avatars.githubusercontent.com/u/43775498?v=4"
                 height={30}
                 width={30}
@@ -69,9 +69,8 @@ function MainContainer() {
           </button>
         </div>
         <div className="order-2">
-          <p className=" mt-6 flex  items-center ">
-             <span className="text-[12px] px-1 md:hidden "> 🎯 Focusing</span>
-          </p>
+          <p className="flex md:hidden mt-3 items-center bottom-8 w-fit bg-[#0d1117] border border-[#30363d] cursor-default rounded-lg px-2 py-[2px] ">🎯<span className={`text-sm ml-1 cursor-text `}> Focusing</span></p>
+
           <p className="mt-2 ">
             MCA Student 👨🏻‍💻 Texh Enthusiast ⚡️ Building cool things on the web
             🚀 Sharing experience
@@ -363,7 +362,7 @@ function MainContainer() {
                       <svg aria-hidden="true" fill="#848d97" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo mr-1 color-fg-muted">
                           <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
                       </svg>
-                      <p className="font-semibold text-sm text-blue-500 hover:underline hover:underline-offset-2">Blogger</p>
+                      <p className="font-semibold text-sm text-blue-500 hover:underline cursor-pointer hover:underline-offset-2">Blogger</p>
                     </div>
                     <p className="border border-[#30363d] text-[12px]  px-2.5 text-gray-400 rounded-full">Public</p>
                   </div>
@@ -427,7 +426,7 @@ function MainContainer() {
                     <svg aria-hidden="true" fill="#848d97" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo mr-1 color-fg-muted">
                         <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
                     </svg>
-                    <p className="font-semibold text-sm text-blue-500 hover:underline hover:underline-offset-2">myLib</p>
+                    <p className="font-semibold text-sm cursor-pointer text-blue-500 hover:underline hover:underline-offset-2">myLib</p>
                   </div>
                   <p className="border border-[#30363d] text-[12px]  px-2.5 text-gray-400 rounded-full">Public</p>
                 </div>
@@ -460,7 +459,7 @@ function MainContainer() {
                     <svg aria-hidden="true" fill="#848d97" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo mr-1 color-fg-muted">
                         <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
                     </svg>
-                    <p className="font-semibold text-sm text-blue-500 hover:underline hover:underline-offset-2">ShopZ</p>
+                    <p className="font-semibold text-sm text-blue-500 cursor-pointer hover:underline hover:underline-offset-2">ShopZ</p>
                   </div>
                   <p className="border border-[#30363d] text-[12px]  px-2.5 text-gray-400 rounded-full">Public</p>
                 </div>

@@ -275,7 +275,7 @@ function Header() {
           <p className="bg-transparent rounded-full w-full h-[2px] mt-px"></p>
         </li>
       </ul>
-        <div className="bg-[#21262d] mt-1 flex sm:hidden  items-center p-[7px] py-[6px] border border-[#30363d] rounded-md mb-2">
+        <div className="bg-[#21262d] mt-2.5 flex sm:hidden  items-center p-[6px] py-[6px] border border-[#30363d] rounded-md mb-2">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-kebab-horizontal Button-visual">
             <path fill="#848d97" d="M8 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm13 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path>
           </svg>
