@@ -203,13 +203,15 @@ function MainContainer() {
             <div className="mt-4 space-y-1">
               <div className="flex flex-wrap gap-1">
                 <img
-                  src="https://camo.githubusercontent.com/f476465e45e884443c2332417256cfd84f520c061faaaa0eb607139df6c5e8da/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4a6176615363726970742d2532334637444631433f7374796c653d666f722d7468652d6261646765266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d303030303030266c6162656c436f6c6f723d25323346374446314326636f6c6f723d253233464643453541"
+                  src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png"
                   alt="JavaScript"
+                  className="h-8"
                   data-canonical-src="https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=for-the-badge&amp;logo=javascript&amp;logoColor=000000&amp;labelColor=%23F7DF1C&amp;color=%23FFCE5A"
                 />
                 <img
-                  src="https://camo.githubusercontent.com/1c1b141d32f5e01a0c794c685f1c38f7b857f1ecdf6e0772ad38ded52529c675/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f432532422532422d3030353939433f7374796c653d666f722d7468652d6261646765266c6f676f3d63253242253242266c6f676f436f6c6f723d7768697465"
+                  src="https://cdn-icons-png.flaticon.com/128/919/919841.png"
                   alt="C++"
+                  className="h-8"
                   data-canonical-src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&amp;logo=c%2B%2B&amp;logoColor=white"
                 />
                 <span className="bg-red-600 flex text-[12px] font-bold items-center font-mono px-4 py-1 gap-2">
@@ -228,22 +230,26 @@ function MainContainer() {
               </div>
               <div className="flex flex-wrap gap-1">
                 <img
-                  src="https://camo.githubusercontent.com/a01e0faed26e233cce09b2dd2e123d53ba1bbc9577f9dda2af21807e1b2d6b34/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d48544d4c352d2532334534344432373f7374796c653d666f722d7468652d6261646765266c6f676f3d68746d6c35266c6f676f436f6c6f723d666666666666"
+                  src="https://cdn-icons-png.flaticon.com/128/5968/5968267.png"
+                  className="h-8"
                   alt="HTML5"
                   data-canonical-src="https://img.shields.io/badge/-HTML5-%23E44D27?style=for-the-badge&amp;logo=html5&amp;logoColor=ffffff"
                 />
                 <img
-                  src="https://camo.githubusercontent.com/53af3e7f3a72f9db3eff644f9ecce56088589f2656b2b349159d8020691905a3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d435353332d2532333135373242363f7374796c653d666f722d7468652d6261646765266c6f676f3d63737333"
+                  src="https://cdn-icons-png.flaticon.com/128/5968/5968242.png"
+                  className="h-8"
                   alt="CSS3"
                   data-canonical-src="https://img.shields.io/badge/-CSS3-%231572B6?style=for-the-badge&amp;logo=css3"
                 />
                 <img
-                  src="https://camo.githubusercontent.com/86399f07eb1ad6a7962d16ad2b7b8a7ad6589b930787b6f61641f4bdbd5dc0c3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d52656163742d3631444146423f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d666666666666"
+                  src="https://cdn-icons-png.flaticon.com/128/919/919851.png"
+                  className="h-8"
                   alt="React"
                   data-canonical-src="https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&amp;logo=react&amp;logoColor=ffffff"
                 />
                 <img
-                  src="https://camo.githubusercontent.com/6c62369c4e99b8a15e8bc2252842ba29e6af1a870849ba36b78e534304113437/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5461696c77696e645f4353532d3338423241433f7374796c653d666f722d7468652d6261646765266c6f676f3d7461696c77696e642d637373266c6f676f436f6c6f723d7768697465"
+                  src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg"
+                  className="h-8 p-1"
                   alt="Tailwind Css"
                   data-canonical-src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&amp;logo=tailwind-css&amp;logoColor=white"
                 />
@@ -256,14 +262,16 @@ function MainContainer() {
                   <p className="tracking-widest">SQL</p>
                 </span>
                 <img
-                  src="https://camo.githubusercontent.com/4ae569342c64ecd9f0d7e7cbed78fffcca6a0f427e8efb4297c1d357dfb09074/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d6f6e676f44422d3445413934423f7374796c653d666f722d7468652d6261646765266c6f676f3d6d6f6e676f6462266c6f676f436f6c6f723d7768697465"
+                  src="https://www.svgrepo.com/show/331488/mongodb.svg"
+                  className="h-8"
                   alt="MongoDB"
                   data-canonical-src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&amp;logo=mongodb&amp;logoColor=white"
                 />
               </div>
               <div className="flex flex-wrap gap-1">
                 <img
-                  src="https://camo.githubusercontent.com/619fd54a45f5cfaad63a1c76c6e7e2c1b9f297e782f0305711f84b58ab5fd8a0/687474703a2f2f696d672e736869656c64732e696f2f62616467652f2d5653253230436f64652d3030374143433f7374796c653d666f722d7468652d6261646765266c6f676f3d76697375616c2d73747564696f2d636f6465266c6f676f436f6c6f723d666666666666"
+                  src="https://code.visualstudio.com/assets/images/code-stable.png"
+                  className="h-8"
                   alt="VS Code"
                   data-canonical-src="http://img.shields.io/badge/-VS%20Code-007ACC?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=ffffff"
                 />
@@ -362,11 +370,15 @@ function MainContainer() {
                       <svg aria-hidden="true" fill="#848d97" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo mr-1 color-fg-muted">
                           <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
                       </svg>
-                      <p className="font-semibold text-sm text-blue-500 hover:underline cursor-pointer hover:underline-offset-2">Blogger</p>
+                      <a href="http://workler.in/" target="_blank" className="font-semibold text-sm text-blue-500 hover:underline cursor-pointer hover:underline-offset-2">Workler.in</a>
                     </div>
-                    <p className="border border-[#30363d] text-[12px]  px-2.5 text-gray-400 rounded-full">Public</p>
+                 <div className="flex gap-2">
+                 <p className="border border-blue-500 text-[12px]  px-2.5 text-blue-400 rounded-full -pt-px">Live</p>
+                 <p className="border border-[#30363d] text-[12px]  px-2.5 text-gray-400 rounded-full">Private</p>
+
+                 </div>
                   </div>
-                <p className="text-[12px] mt-1.5  ">A blog posting website which make blogging esaier</p>
+                <p className="text-[12px] mt-1.5  ">A job portal website to find jobs for candidates and for employeers to find candidates</p>
              </div>
               <div className="flex gap-4 flex-wrap">
                 <div className="flex  items-center gap-1">
@@ -380,6 +392,14 @@ function MainContainer() {
                 <div className="flex items-center gap-1">
                     <p className="bg-blue-400 border border-[#30363d]  rounded-full h-3 w-3 "></p>
                     <p className="text-[12px]  -mt-[2px]">Tailwind</p>
+                </div>
+                <div className="flex items-center gap-1">
+                    <p className="bg-yellow-500 border border-[#30363d]  rounded-full h-3 w-3 "></p>
+                    <p className="text-[12px]  -mt-[2px]">Node.js</p>
+                </div>
+                <div className="flex items-center gap-1">
+                    <p className="bg-green-500 border border-[#30363d]  rounded-full h-3 w-3 "></p>
+                    <p className="text-[12px]  -mt-[2px]">Mongo DB</p>
                 </div>
               </div>
             </div>
