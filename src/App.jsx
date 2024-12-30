@@ -8,7 +8,7 @@ import MainContainer from "./components/MainContainer";
 function App() {
   return (
     <div
-      className="bg-[#0d1117] flex flex-col min-h-dvh min-w-96"
+      className="bg-[#0d1117] flex flex-col  min-h-dvh "
       style={{ scrollbarWidth: "none" }}
     >
       <Header />

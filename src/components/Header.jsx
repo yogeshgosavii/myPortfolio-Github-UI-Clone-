@@ -18,7 +18,7 @@ function Header() {
     fetchGithubData();
   }, []);
   return (
-    <header className=" p-4 pb-0 bg-[#010409] border-b border-[#30363d]">
+    <header className=" p-4 pb-0 bg-[#010409] sticky top-0 z-20 border-b border-[#30363d]">
       <div className="flex justify-between">
         <div className="flex gap-4 text-gray-100 ">
           <svg
@@ -73,7 +73,7 @@ function Header() {
             </svg>
           </div>
           <p className="border-l border-[#30363d] hidden sm:inline  m-[6px] mx-[4px]"></p>
-          <div className="flex gap-[8px]">
+          <div className="flex ">
             <span class="Button-content  border rounded-md px-[8px] gap-[9px] hidden sm:flex items-center border-[#30363d]">
               <span class="">
                 <svg
