@@ -1,6 +1,6 @@
 # myPortfolio 
 
-Welcome to myPortfolio! This website showcases my projects, skills, and contact information in a clean and modern design inspired by GitHub's layout.
+Welcome to myPortfolio! This website is a github ui clone that showcases my projects, skills, and contact information in a clean and modern design inspired by GitHub's layout.
 
 ## Table of Contents
 - [Introduction](#introduction)
